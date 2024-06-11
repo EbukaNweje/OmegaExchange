@@ -9,7 +9,7 @@ const sendLoginEmail = async () => {
   const data = {
     email: email.value,
   };
-  fetch('https://tonexbackend.onrender.com/api/loginemailsand', {
+  fetch('https://omegaexchangebackend.onrender.com/api/loginemailsand', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ button.onclick = async (event) => {
   console.log(data);
   button.innerHTML = "Loading...";
 
-  fetch('https://tonex-backend.vercel.app/api/login', {
+  fetch('https://omega-exchange-back-end.vercel.app/api/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ button.onclick = async (event) => {
       const userId = localStorage?.getItem('userId')
       console.log("Local User Id", userId);
       if (response.message === 'User have not been verified'){
-        window.location = `https://bitpaynexus-dashboard.vercel.app/`;
+        window.location = `https://omega-exchange-account.vercel.app/`;
         console.log("object");
         return
       }if (response._id === '' || response._id === undefined){
@@ -62,7 +62,7 @@ button.onclick = async (event) => {
          const id = localStorage?.getItem('userId')
         //  console.log(userId)
         sendLoginEmail()
-        window.location = `https://bitpaynexus-dashboard.vercel.app/#/${id}`;
+        window.location = `https://omega-exchange-account.vercel.app/#/${id}`;
       }
     })  
     .catch((error) => {
