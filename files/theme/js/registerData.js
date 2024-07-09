@@ -64,7 +64,6 @@ button.onclick = async (event) => {
       const userId = JSON.parse(localStorage.getItem('userId'))
       console.log("Local User Id", userId);
       window.location.href = `https://omega-exchange-account.vercel.app/`;
-      
     })
     .catch((error) => {
       console.log(error);
