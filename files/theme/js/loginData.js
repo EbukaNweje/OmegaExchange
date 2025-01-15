@@ -50,7 +50,7 @@ button.onclick = async (event) => {
       const userId = localStorage?.getItem('userId')
       console.log("Local User Id", userId);
       if (response.message === 'User have not been verified'){
-        window.location = `https://omega-exchange-account.vercel.app/`;
+        window.location = `https://omega-exchange-dashboard.vercel.app/`;
         console.log("object");
         return
       }if (response._id === '' || response._id === undefined){
@@ -62,7 +62,7 @@ button.onclick = async (event) => {
          const id = localStorage?.getItem('userId')
         //  console.log(userId)
         sendLoginEmail()
-        window.location = `https://omega-exchange-account.vercel.app/#/${id}`;
+        window.location = `https://omega-exchange-dashboard.vercel.app/#/${id}`;
       }
     })  
     .catch((error) => {
