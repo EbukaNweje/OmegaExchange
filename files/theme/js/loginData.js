@@ -36,7 +36,7 @@ button.onclick = async (event) => {
   console.log(data);
   button.innerHTML = "Loading...";
 
-  fetch('https://omega-exchange-back-end.vercel.app/api/login', {
+  fetch('https://omega-exchange-back-end-one.vercel.app/api/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
